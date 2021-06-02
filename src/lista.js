@@ -30,7 +30,7 @@ module.exports = class Lista {
 
     // Inserta un elemento a la lista.
     add(clave, valor) {
-        if (/^[a-zA-Z]+$/.test(clave)) {
+        if (typeof clave == "string") {
             var indx = this.findIndex(this.#elementos, clave);
             if (indx != -1)
                 this.#elementos[indx].valor = valor;
