@@ -25,6 +25,18 @@ Escenario: Buscar un elemento en una lista con datos
     Y si busco la clave "claveDos" obtengo el valor "9"
     Y si busco la clave "claveTres" obtengo el valor "tres"
 
+Escenario: Buscar un elemento inexistente en una lista con datos
+    Dado una lista con los siguientes elementos
+    | clave  | valor |
+    | claveUno | valor1 |
+    | claveDos |   9  |
+    | claveTres |   tres  |
+    Entonces la lista tiene 3 elementos almacenados
+    Y si busco la clave "claveUno" obtengo el valor "valor1"
+    Y si busco la clave "claveDos" obtengo el valor "9"
+    Y si busco la clave "claveTres" obtengo el valor "tres"
+    Y si busco la clave "Noexiste" no obtengo ningun valor
+
 Escenario: Eliminar un elemento existente en una lista con datos
     Dado una lista con los siguientes elementos
     | clave  | valor |
